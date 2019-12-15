@@ -15,23 +15,24 @@
             <h1>courses</h1>
             <br>
             <h4>feedback</h4>
-            <button>B</button><button>I</button><button>Underline</button>
-            <select>
-                <option>20px</option>>
-                <option>30px</option>>
-                <option>40px</option>>
+
+            <button onclick="bold()" type='button'>B</button><button onclick="italic()" type='button'>I</button><button onclick="souligné()" type='button'>Underline</button>
+            <select onchange="taille()" id="taille1">
+                <option value="20px">20px</option>>
+                <option value="30px">30px</option>>
+                <option value="30px">40px</option>>
 
     
             </select>
-            <select>
-                    <option>arial</option>>
-                    <option>myriad</option>>
-                    <option>times new roman</option>>
+            <select onchange="poli()" id="police">
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Times">Arial</option>
+                    <option value="serif">serif</option>
                  
         
                 </select>
                 <br>
-                <textarea cols="70" rows="30"> </textarea>
+                <textarea rows="3" id="textArea"></textarea>
 
     </form>
        
@@ -42,6 +43,6 @@
 
 </body>
 
-
+<script src="js/main.js"></script>
 
 </html>
