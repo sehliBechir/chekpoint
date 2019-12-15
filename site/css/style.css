@@ -9,6 +9,7 @@ img{
     font-weight: bold;
     font-size: 200%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     color: blanchedalmond;
     
 }
@@ -29,6 +30,10 @@ ul li {
     margin-left: 30px; 
 }
 
+#text{
+    text-align: center;
+
+}
 ul {
     display: flex;
     justify-content: space-around;
@@ -45,3 +50,4 @@ ul {
 #textArea {
     height: auto;
 }
+
