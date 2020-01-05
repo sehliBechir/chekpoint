@@ -51,3 +51,64 @@ ul {
     height: auto;
 }
 
+h1{
+color: cornsilk;
+text-align: center;
+}
+#images{
+    display: flex;
+    justify-content: space-around;
+    
+}
+#images img{
+    
+    height: 250px;
+    width: 250px;
+   
+}
+
+#cour1{
+    background-image: url("../res/img1.jpg");
+    width: 250px;
+    height: 250px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#cour2{
+    background-image: url("../res/img2.jpg");
+    width: 250px;
+    height: 250px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#cour3{
+    background-image: url("../res/img3.jpg");
+    width: 250px;
+    height: 250px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#btn1 {
+    visibility: hidden;
+}
+
+#barre{
+    width:100%;
+    height: 20px;
+}
