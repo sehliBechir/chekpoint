@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link rel="icon" href="res/browser-web-icon.png">
-<link rel="stylesheet" href="css/style.css">
-
+    <link rel="icon" href="res/browser-web-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div id="navbar">
-        <img src="res/section2GMCLogo.png">
-        <ul>
-            <li> <a class="menu" href="index.html">Home</a></li>
-            <li> <a class="menu" href="courses.html">Courses</a></li>
-            <li> <a class="menu" href="contact.html">Contact</a> </li>
-        </ul>
+    <!-- Second navbar for search -->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-3">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">GOMYCODE</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-3">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">ACCUEIL</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li>
+                        <a class="btn btn-default btn-outline btn-circle" data-toggle="collapse" href="#nav-collapse3"
+                            aria-expanded="false" aria-controls="nav-collapse3">Search</a>
+                    </li>
+                </ul>
+                <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse3">
+                    <form class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" />
+                        </div>
+                        <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search"
+                                aria-hidden="true"></span></button>
+                    </form>
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+    <div id="top">
+
+        <h1 id="title"> CONTACT</h1>
+
     </div>
-<br>
-<div  id="text">
-    <h1>Contact</h1>
-<form>
-    <label>name</label>
     <br>
-    <input type="text" placeholder="Jhon Doe">
-    <br>
-    <label>track</label>
-    <br>
-    <select>
-        <option>Web</option>
-        <option>Design</option>
-    </select>
-    <br>
-    <label>Email Adress</label>
-    <br>
-    <input type="text">
-    <br>
-    <label>Phone number</label>
-    <br>
-    <input type="text">
-    <br>
-    <button>submit</button><button>submit</button>
+    <div id="text" >
+        <form>
+            <div class="form-group" >
+                <label class="title">name</label>
+                <input type="text" class="form-control" placeholder="Jhon Doe">
+            </div>
+            <div class="form-group" >
+                <label class="title">track</label>
+                <select class="form-control">
+                    <option class="form-control">Web</option>
+                    <option class="form-control">Design</option>
+                </select>
+            </div>
+            <div class="form-group" >
+                <label class="title">Email Adress</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label class="title">Phone number</label>
+                <input class="form-control" type="number">
 
-   
-</form>
-</div>
-
-
+            </div>
+            <button type="submit" class="btn-primary">submit</button>
+        </form>
+    </div>
 </body>
 
 

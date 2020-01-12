@@ -95,5 +95,38 @@ $(document).ready(function(){
         $("#cour3").css("opacity", "1");
     });
   });
+  $(document).ready(function(){
+    $("#cour4").mouseover(function(){
+        $("#btn4").css("visibility", "visible");
+        $("#cour4").css("opacity", "0.5");
+    });
+    $("#cour4").mouseout(function(){
+        $("#btn4").css("visibility", "hidden");
+        $("#cour4").css("opacity", "1");
+    });
+  });
+  $(document).ready(function(){
+    $("#cour5").mouseover(function(){
+        $("#btn5").css("visibility", "visible");
+        $("#cour5").css("opacity", "0.5");
+    });
+    $("#cour5").mouseout(function(){
+        $("#btn5").css("visibility", "hidden");
+        $("#cour5").css("opacity", "1");
+    });
+  });
+  $(document).ready(function(){
+    $("#cour6").mouseover(function(){
+        $("#btn6").css("visibility", "visible");
+        $("#cour6").css("opacity", "0.5");
+    });
+    $("#cour6").mouseout(function(){
+        $("#btn6").css("visibility", "hidden");
+        $("#cour6").css("opacity", "1");
+    });
+  });
+
+
+
 
   

@@ -3,24 +3,210 @@
 <head>
 <link rel="icon" href="res/browser-web-icon.png">
 <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 250px; /* Location of the box */
+          top: 1px;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        </style>
 </head>
 <body>
-    <div id="navbar">
-        <img src="res/section2GMCLogo.png">
-        <ul>
-            <li> <a class="menu" href="index.html">Home</a></li>
-            <li> <a class="menu" href="courses.html">Courses</a></li>
-            <li> <a class="menu" href="contact.html">Contact</a> </li>
-        </ul>
+    <!-- Second navbar for search -->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-3">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">GOMYCODE</a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-3">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">ACCUEIL</a></li>
+              <li><a href="courses.html">COURSES</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+              <li>
+                <a class="btn btn-default btn-outline btn-circle"  data-toggle="collapse" href="#nav-collapse3" aria-expanded="false" aria-controls="nav-collapse3">Search</a>
+              </li>
+            </ul>
+            <div class="collapse nav navbar-nav nav-collapse" id="nav-collapse3">
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search" />
+                </div>
+                <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+              </form>
+            </div>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav><!-- /.navbar -->
+<div id="top">
+
+    <h1 id="title"> COURSES</h1>
+
 </div>
+<br>
+<br>
+<br>
+<div class="row"  id="images">
+    <div class="col-md-4 col-sm-12 text-center">
+      <div id="cour1">
+        <button id="btn1"> view more</button>
+       </div>
+    </div>
+    <div class="col-md-4 col-sm-12 text-center">
+      <div id="cour2">
+        <button id="btn2"> view more</button>
+       </div>
+    </div>
+    <div class="col-md-4 col-sm-12 text-center">
+      <div id="cour3">
+        <button id="btn3"> view more</button>
+       </div>
+    </div>
+    <div class="col-md-4 col-sm-12 text-center">
+        <div id="cour4">
+          <button id="btn4"> view more</button>
+         </div>
+      </div>
+      <div class="col-md-4 col-sm-12 text-center">
+        <div id="cour5">
+          <button id="btn5"> view more</button>
+         </div>
+      </div>
+      <div class="col-md-4 col-sm-12 text-center">
+        <div id="cour6">
+          <button id="btn6"> view more</button>
+         </div>
+      </div>
+  </div>
 
-<center>
-    <form>
-            <h1>courses</h1>
-            <br>
-            <h4>feedback</h4>
 
-            <button onclick="bold()" type='button'>B</button><button onclick="italic()" type='button'>I</button><button onclick="souligne()" type='button'>Underline</button>
+  <!-- Trigger/Open The Modal -->
+  <button id="btn1">Open Modal</button>
+  
+  
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>This is a GoMyCode Track.
+          <br>
+          Each track has its own goal.
+          <br>
+          By adopting this track, you chose your own goal.</p>
+    </div>
+  
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("btn1");
+  var btn1 = document.getElementById("btn2");
+  var btn2 = document.getElementById("btn3");
+  var btn3 = document.getElementById("btn4");
+  var btn4 = document.getElementById("btn5");
+  var btn5 = document.getElementById("btn6");
+
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+    disableScroll();
+  }
+  btn1.onclick = function() {
+    modal.style.display = "block";
+    disableScroll();
+  }
+  btn2.onclick = function() {
+    modal.style.display = "block";
+    disableScroll();
+  }
+  btn3.onclick = function() {
+    modal.style.display = "block";
+    disableScroll();
+  }
+  btn4.onclick = function() {
+    modal.style.display = "block";
+    disableScroll();
+  }
+  btn5.onclick = function() {
+    modal.style.display = "block";
+    disableScroll();
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+      enableScroll();
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      enableScroll();
+    }
+  }
+  </script>
+    <div class="row"  align="center" id="formulaire"><form> 
+           
+            <h4 id="feed">Feedback </h4>
+
+            <button onclick="bold()" type='button'>B</button> <button onclick="italic()" type='button'>I</button> <button onclick="souligne()" type='button'>Underline</button>
             <select onchange="taille()" id="taille1">
                 <option value="20px">20px</option>>
                 <option value="30px">30px</option>>
@@ -35,13 +221,14 @@
                  
         
                 </select>
+           
                 <br>
-                <textarea rows="3" id="textArea"></textarea>
+                <br>
+                <textarea rows="5" cols="60"id="textArea"></textarea>
 
     </form>
-       
+</div>
 
-</center>
 
 
 
